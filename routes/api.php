@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CityController;
 use App\Http\Controllers\Api\StateController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,7 @@ Route::get('states', [StateController::class, 'index']);
 Route::post('states', [StateController::class, 'store']);
 Route::get('states/{id}', [StateController::class, 'show']);
 Route::put('states', [StateController::class, 'update']);
+
+Route::get('cities', [CityController::class, 'index']);
+Route::get('findCitiesWithStates', [CityController::class, 'findCitiesWithStates']);
+Route::post('city', [CityController::class, 'store']);

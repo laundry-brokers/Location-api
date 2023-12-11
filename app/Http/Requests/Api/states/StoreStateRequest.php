@@ -38,7 +38,7 @@ class StoreStateRequest extends FormRequest
 
     public function attributes() {
         return [
-            'name_product' => 'Estado/Provincia',
+            'name_state' => 'Estado/Provincia',
         ]; 
     }
 }
