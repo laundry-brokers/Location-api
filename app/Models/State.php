@@ -12,4 +12,8 @@ class State extends Model
     protected $table = 'states';
     protected $fillable = ['name_state'];
     public $timestamp = true;
+
+    public function cities() {
+        return $this->hasMany(City::class, 'id_state');
+    }
 }
